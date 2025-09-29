@@ -1,0 +1,194 @@
+import React from 'react';
+import styled from 'styled-components';
+import formImage from '../assets/form-image.png';
+// import girlWithTree from '../assets/girl-with-tree.png';
+import { device } from './device';
+
+const ContactSection = styled.section`
+  padding: 100px 0;
+`;
+
+const ContactContainer = styled.div`
+  max-width: 1440px;
+  margin: 0 2%;
+  /* padding: 0 10px; */
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  @media ${device.tablet} {
+    padding: 0;
+    background-image: url(${formImage});
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+`;
+
+const ContactContent = styled.div`
+  flex: 1;
+  @media ${device.tablet} {
+    margin: 10%;
+  }
+`;
+
+const ContactTitle = styled.h2`
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.33;
+  color: #171715;
+  margin: 0 0 40px 0;
+  @media ${device.tablet} {
+    display: none;
+  }
+`;
+
+const ContactSubtitle = styled.h3`
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.33;
+  color: #171715;
+  margin: 0 0 40px 0;
+`;
+
+const ContactForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  border-radius: 10px;
+  
+  @media ${device.tablet} {
+    background-color: rgba(217, 217, 217, 0.9);
+  }
+`;
+
+const FormField = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+`;
+
+const FormLabel = styled.label`
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #616161;
+`;
+
+const FormInput = styled.input`
+  width: 100%;
+  height: 70px;
+  padding: 0 20px;
+  border: 1px solid #C1B7B7;
+  border-radius: 15px;
+  background: transparent;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  &:focus {
+    outline: none;
+    border-color: #0570C1;
+  }
+`;
+
+const FormTextarea = styled.textarea`
+  width: 100%;
+  height: 70px;
+  padding: 20px;
+  border: 1px solid #C1B7B7;
+  border-radius: 15px;
+  background: transparent;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  resize: vertical;
+  
+  &:focus {
+    outline: none;
+    border-color: #0570C1;
+  }
+`;
+
+const ContactButton = styled.button`
+  background: #0570C1;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 15px;
+  padding: 20px 40px;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  width: 358px;
+  height: 98px;
+  
+  &:hover {
+    background: #045a9e;
+  }
+`;
+
+const ContactImages = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  @media ${device.tablet} {
+    display: none;
+  }
+`;
+
+const ContactImage = styled.img`
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+`;
+
+export default function Contact() {
+// const Contact = () => {
+  return (
+    <ContactSection name="Contact">
+      <ContactContainer>
+        <ContactContent>
+          <ContactSubtitle>Свяжитесь с нами через телеграмм:</ContactSubtitle>
+          
+          <ContactForm>
+            <FormField>
+              <FormLabel>Ваше имя</FormLabel>
+              <FormInput type="text" placeholder="Введите ваше имя" />
+            </FormField>
+            
+            <FormField>
+              <FormLabel>Телефон</FormLabel>
+              <FormInput type="tel" placeholder="Введите ваш телефон" />
+            </FormField>
+            
+            <FormField>
+              <FormLabel>Емейл</FormLabel>
+              <FormInput type="email" placeholder="Введите ваш email" />
+            </FormField>
+            
+            <FormField>
+              <FormLabel>Комментарий</FormLabel>
+              <FormTextarea placeholder="Введите ваш комментарий" />
+            </FormField>
+            
+            <ContactButton>Отправить в телеграмм</ContactButton>
+          </ContactForm>
+           <ContactTitle>Контакт:</ContactTitle>
+        </ContactContent>
+        
+        <ContactImages>
+          <ContactImage src={formImage} alt="Contact Form" />
+          {/* <ContactImage src={girlWithTree} alt="Girl with Tree" /> */}
+        </ContactImages>
+      </ContactContainer>
+
+    </ContactSection>
+  );
+};
+

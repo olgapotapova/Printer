@@ -1,0 +1,135 @@
+import React from 'react';
+import styled from 'styled-components';
+import timeImage from '../assets/Time-image.svg';
+import surfaceImage from '../assets/Surface-image.svg';
+import weekendImage from '../assets/Weekend-image.svg';
+import visualizationImage from '../assets/Visualization-image.svg';
+import { device } from './device';
+import Slider from './Slider';
+
+
+const AdvantagesSection = styled.section`
+  position: relative;
+  z-index: 3;
+  padding: 48px 0;
+`;
+
+const AdvantagesContainer = styled.div`
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 110px;
+    @media ${device.tablet} {
+      padding: 0;
+      }
+`;
+
+const AdvantagesTitle = styled.h2`
+  font-family: 'Playfair Display', serif;
+  font-size: 39px;
+  font-weight: 700;
+  line-height: 1.33;
+  color: #171715;
+  text-align: left;
+    @media ${device.tablet} {  
+      text-align: center;
+    }
+`;
+
+const AdvantagesGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0px;
+  margin-top: 50px;
+    @media ${device.tablet} {  
+      grid-template-columns: auto;  
+    }
+`;
+
+const AdvantageCard = styled.div`
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  border-radius: 15px;
+  padding: 64px 60px 85px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  @media ${device.tablet} {  
+    
+  }
+`;
+
+const AdvantageIcon = styled.img`
+  width: 60px;
+  height: 60px;
+  margin: auto auto 35px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const AdvantageText = styled.p`
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.43;
+  color: #616161;
+  margin: 0;
+  text-align: center;
+    @media ${device.tablet} {  
+      font-size: 14px; 
+    }
+`;
+
+export default function Advantages() {
+  const advantages = [
+    {
+      text: 'Печать за 1 день без демонтажа и ремонта.',
+      icon: timeImage,
+      title: ''
+    },
+    {
+      text: '20+ поверхностей: бетон, плитка, стекло...',
+      icon: surfaceImage,
+      title: ''
+    },
+    {
+      text: 'Работа в выходные и праздники.',
+      icon: weekendImage,
+      title: ''
+    },
+    {
+      text: 'Бесплатная визуализация перед началом работ.',
+      icon: visualizationImage,
+      title: ''
+    }
+  ];
+
+  return (
+    <AdvantagesSection name="Advantages">
+      <AdvantagesContainer>
+        <AdvantagesTitle>Почему мы?</AdvantagesTitle>
+        <AdvantagesGrid>
+          {advantages.map((advantage, index) => (
+            <AdvantageCard key={index}>
+              <AdvantageIcon src={advantage.icon} alt={advantage.title}/>
+              <AdvantageText>{advantage.text}</AdvantageText>
+            </AdvantageCard>
+
+          ))}
+          {advantages.map((advantage, index) => (
+            <Slider>
+              <AdvantageCard key={index}>
+                <AdvantageIcon src={advantage.icon} alt={advantage.title}/>
+                <AdvantageText>{advantage.text}</AdvantageText>
+              </AdvantageCard>
+            </Slider>
+          ))}
+        </AdvantagesGrid>
+      </AdvantagesContainer>
+    </AdvantagesSection>
+  );
+};
