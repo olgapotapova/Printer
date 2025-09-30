@@ -37,8 +37,10 @@ const HeroBackground = styled.div`
 
 const HeroContainer = styled.div`
   max-width: 1440px;
+  /* max-width: 1180px; */
   margin: 0 auto;
-  padding: 0 0 0 9%;
+  padding: 100px 9%;
+  /* padding: 0 0 0 9%; */
   position: relative;
   z-index: 2;
   @media ${device.tablet} {
@@ -48,24 +50,22 @@ const HeroContainer = styled.div`
 
 const HeroHeader = styled.header`
   display: flex;
-  justify-content: start;
+  /* justify-content: start; */
   align-items: center;
-  gap: 2vw;
+  /* gap: 2vw; */
   padding-top: 36px;
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     padding-top: 0;
+    justify-content: space-around
   }
 `;
 
 const Logo = styled.div`
   display: flex;
   align-items: center;
-  gap: 20px;
   @media ${device.tablet} {
     margin-left: 10%;
   }
-
- 
 `;
 
 const LogoText = styled.h1`
@@ -100,10 +100,10 @@ const Navigation = styled.nav`
   align-items: center;
   gap: 3vw;
   @media (max-width: 1070px) {
-    gap: 2vw;
+    gap: 1vw;
   }
   @media ${device.tablet} {
-    gap: 20px;
+    /* gap: 20px; */
   }
 `;
 
@@ -199,6 +199,7 @@ const ScrollButton = styled.button`
 
 const LanguageSelector = styled.div`
   display: flex;
+  display: none;
   align-items: center;
   gap: 20px;
   border: solid black 1px;
@@ -229,7 +230,7 @@ const HeroContent = styled.div`
   /* justify-content: space-between; */
   align-items: top;
   padding-top: 40px;
-  gap: 30px;
+  /* gap: 30px; */
   @media ${device.tablet} {
     padding-top: 0px;
     justify-content: center;
@@ -238,15 +239,16 @@ const HeroContent = styled.div`
 
 const HeroText = styled.div`
   max-width: 50%;
+  width: 50%;
+  /* padding: 0 10%; */
   @media ${device.tablet} {
     max-width: 85%;
+    width: 75%;
     position: absolute;
     z-index: 4;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
   }
 `;
 
@@ -257,11 +259,14 @@ const HeroTitle = styled.h2`
   line-height: 1.05;
   color: #171715;
   margin-top: -4%;
+  @media ${device.laptop} {
+    font-size: 80px;
+  }
   @media ${device.tablet} {
     font-size: 74px;
     color: #06fceb;
     text-align: center;
-    margin-top: 10%;
+    margin: 10% auto 10%;
   }
 `;
 
@@ -277,7 +282,8 @@ const HeroSubtitle = styled.p`
     text-align: center;
     background-color: rgba(225, 225, 225, 0.5);
     border-radius: 10px;
-    padding: 0;
+    padding: 10% 10%;
+    color: black;
   }
 `;
 
@@ -306,24 +312,33 @@ const HeroButton = styled.button`
 
 const HeroImageContainer = styled.div`
   position: relative;
-  width: 100%;
+  width: 50vw;
+  max-width: 50vw;
   height: 970px;
   overflow-y: visible;
   @media ${device.tablet} {
     width: 100vw;
+    min-width: 100vw;
+    max-width: 100vw;
   }
 `;
 
 const FrontImage = styled.img`
-  position: absolute;
-  width: 100%;
+  /* position: absolute; */
+  position: sticky;
+  width: 110%;
+  transform: translateX(9%);
   height: 970px;
   object-fit: cover;
   border-radius: 15px;
   z-index: 2;
   @media ${device.tablet} {
-    width: 100vw;
+    position: absolute;
+    transform: translateX(0);
+    min-width: 100vw;
+    width: 100%;
     background-size: 100%;
+    filter: brightness(60%);
   }
 `;
 

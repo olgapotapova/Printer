@@ -56,15 +56,22 @@ const TextTop = styled.h1`
   font-size: 48px;
   font-weight: bold;
   color: white;
+  @media (max-width: 480px) {
+    font-size: 24px;
+    bottom: 10px;
+    left: -10px;
+  }
 `;
 
 const ServicesSection = styled.section`
   display: flex;
   flex-direction: row;
   margin: -146px auto;
-  padding: 100px 0;
+  /* padding: 100px 0; */
+  padding: 100px 9%;
   background: #FFFFFF;
   max-width: 1440px;
+   /* max-width: 1180px; */
   position: relative;
   z-index: 1;
     @media ${device.tablet} {
@@ -75,11 +82,13 @@ const ServicesSection = styled.section`
 
 const ServicesContainer = styled.div`
   max-width: 50%;
-  /* width: 50%; */
-  padding: 0 10%;
+  width: 50%;
+  /* padding-right: 9%; */
+  /* padding: 0 9%; */
     @media ${device.tablet} {
       padding: 0;
       max-width: 100%;
+      width: 100%;
     }
 `;
 
@@ -112,19 +121,17 @@ const ServiceCard = styled.div`
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   padding-bottom: 15px;
   margin-bottom: 13%;
-  
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   }
-
   @media ${device.tablet} {
     border-radius: 10px;
-    max-width: 80%;
+    max-width: 90%;
     text-align: center;
     flex-direction: column;
-    padding: 40px 40px 70px;
-    margin: auto;
+    padding: 40px 30px 70px;
+    margin: 5% auto;
     background-color: rgba(225, 225, 225, 0.5);
   }
 `;

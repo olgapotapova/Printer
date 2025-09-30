@@ -38,11 +38,24 @@ const AdvantagesTitle = styled.h2`
 const AdvantagesGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0px;
+  gap: 2%;
   margin-top: 50px;
-    @media ${device.tablet} {  
-      grid-template-columns: auto;  
-    }
+  @media ${device.laptop} {  
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media ${device.tablet} {  
+    display: none;
+  }
+`;
+
+const AdvantagesGridMobile = styled.div`
+  display: none;
+  margin-top: 50px;
+  @media ${device.tablet} {  
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0px;
+  }
 `;
 
 const AdvantageCard = styled.div`
@@ -57,7 +70,8 @@ const AdvantageCard = styled.div`
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   }
   @media ${device.tablet} {  
-    
+    width: 60vw;
+    margin: auto;
   }
 `;
 
@@ -120,15 +134,19 @@ export default function Advantages() {
             </AdvantageCard>
 
           ))}
-          {advantages.map((advantage, index) => (
+        </AdvantagesGrid>
+
+        <AdvantagesGridMobile>
             <Slider>
+              {advantages.map((advantage, index) => (
               <AdvantageCard key={index}>
                 <AdvantageIcon src={advantage.icon} alt={advantage.title}/>
                 <AdvantageText>{advantage.text}</AdvantageText>
               </AdvantageCard>
-            </Slider>
-          ))}
-        </AdvantagesGrid>
+              ))}
+            </Slider>  
+          </AdvantagesGridMobile>
+
       </AdvantagesContainer>
     </AdvantagesSection>
   );

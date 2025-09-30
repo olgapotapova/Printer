@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import RobotImage from '../assets/Machine-image.svg';
 import { device } from './device';
+import Modal from "./Modal";
 
 const FAQSection = styled.section`
   padding: 100px 0;
@@ -60,6 +61,39 @@ const FAQItem = styled.div`
   }
 `;
 
+const Question = styled.p`
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+`;
+
+const Answer = styled.p`
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+`;
+
+const FAQButton = styled.button`
+  background: #0570c1;
+  color: #ffffff;
+  border: none;
+  border-radius: 15px;
+  font-family: "Playfair Display", serif;
+  font-size: 17px;
+  line-height: 1;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 300px;
+  height: 84px;
+  margin-top: 14%;
+  &:hover {
+    background: #045a9e;
+  }
+  @media ${device.tablet} {
+    margin-right: auto;
+    margin-left: auto;
+  }
+`;
+
 const FAQImage = styled.div`
   flex: 1;
   max-width: 600px;
@@ -88,11 +122,31 @@ const FAQIcon = styled.img`
 `;
 
 const FAQ = () => {
+  const [modalContent, setModalContent] = useState(null);
+  const openModal = (content) => setModalContent(content);
+  const closeModal = () => setModalContent(null);
+
   const faqItems = [
-    'Можно ли печатать на фактурной стене?',
-    'Работаетем ли мы с дизайном клиента?',
-    'Как заказать услугу в Финляндии?',
-    'Сколько держится изображение?'
+        {
+          question: 'Можно ли печатать на фактурной стене?',
+          answer: 'Да, на фактурной стене печатать можно, но нужно понимать, что многое будет зависеть от фактуры, в некоторых случаях, краска не будет попадать в углубления, а будет расположена лишь на выступах. Если такой вариант вас устраивает, тогда печатать можно.'
+        },
+                {
+          question: 'Работаетем ли мы с дизайном клиента?',
+          answer: 'Да, мы работаем с дизайном клиента: вы можете найти в интернете изображение, создать его с помощью ИИ или прислать нам фотографию, с которой мы сами удалим фон. Вы можете также заказать стилизацию у любого постороннего дизайнера и предоставить макет нам.'
+        },
+                {
+          question: 'Как заказать услугу в Финляндии?',
+          answer: 'Заказать услугу в Финляндии можно точно так же, как и в Эстонии. Для этого необходимо заполнить форму и сообщение будет отправлено в Телеграмм, позже мы свяжемся с вами и обговорим подробности. '
+        },
+                {
+          question: 'Сколько держится изображение?',
+          answer: ' Изображение в помещении держится  10-15 лет и более, а на улице - от 3 лет и более  благодаря использованию UV-чернил, которые устойчивы к выцветанию и влаге. '
+        }
+    // 'Можно ли печатать на фактурной стене?',
+    // 'Работаетем ли мы с дизайном клиента?',
+    // 'Как заказать услугу в Финляндии?',
+    // 'Сколько держится изображение?'
   ];
 
   return (
@@ -106,10 +160,25 @@ const FAQ = () => {
           <FAQList>
             {faqItems.map((item, index) => (
               <FAQItem key={index}>
-                -- {item}
+                -- {item.question}
               </FAQItem>
             ))}
           </FAQList>
+
+          <FAQButton onClick={() => openModal(<p>Контактная форма</p>)}>
+              Читать ответы
+          </FAQButton>
+
+          <Modal isOpen={!!modalContent} onClose={closeModal}>
+            <FAQList>
+              {faqItems.map((item, index) => (
+              <FAQItem key={index}>
+                <Question>{item.question}</Question>
+                <Answer>{item.answer}</Answer>
+              </FAQItem>
+               ))}
+            </FAQList>
+          </Modal>
         </FAQContent>
         
       </FAQContainer>

@@ -9,13 +9,15 @@ const FooterSection = styled.footer`
   background: #228091;
   padding: 60px 0;
   color: #FFFFFF;
+  margin: 0 auto;
 `;
 
 const FooterContainer = styled.div`
   max-width: 1440px;
-  margin: 0 10%;
-  padding: 0 10%;
+  margin: 0 auto;
+  padding: 0 9%;
   @media ${device.tablet} {
+    margin: 0 10%;
     padding: 0;
   }
 `;
@@ -66,6 +68,11 @@ const FooterDescription = styled.p`
   margin: 0;
   text-align: center;
   grid-column: 1 / -1;
+  @media ${device.tablet} {
+    max-width: 80%;
+    padding-bottom: 30%;
+    margin: auto;
+  }
 `;
 
 const FooterLinks = styled.div`

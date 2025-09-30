@@ -26,20 +26,23 @@ const Arrow = styled.button`
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  color: white;
+  background-color: transparent;
+  color: rgba(0,0,0,0.3);
   border: none;
   padding: 10px;
   cursor: pointer;
   z-index: 10;
-  font-size: 18px;
+  font-size: 40px;
 
   ${(props) => props.left && 'left: 10px;'}
   ${(props) => props.right && 'right: 10px;'}
 
   @media (max-width: 480px) {
-    font-size: 14px;
+    font-size: 30px;
     padding: 8px;
+
+    ${(props) => props.left && 'left: -10px;'}
+    ${(props) => props.right && 'right: -10px;'}
   }
 `;
 
@@ -58,8 +61,8 @@ const Slider = ({ children }) => {
 
   return (
     <SliderWrapper {...swipeHandlers}>
-      <Arrow left onClick={prev}>←</Arrow>
-      <Arrow right onClick={next}>→</Arrow>
+      <Arrow left onClick={prev}>&#9668;</Arrow>
+      <Arrow right onClick={next}>&#9658;</Arrow>
       <SlideTrack index={index}>
         {React.Children.map(children, (child, i) => (
           <Slide key={i}>{child}</Slide>

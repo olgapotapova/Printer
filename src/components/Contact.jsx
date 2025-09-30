@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import formImage from '../assets/form-image.png';
 // import girlWithTree from '../assets/girl-with-tree.png';
@@ -10,12 +10,13 @@ const ContactSection = styled.section`
 
 const ContactContainer = styled.div`
   max-width: 1440px;
-  margin: 0 2%;
-  /* padding: 0 10px; */
+  margin: 0 auto;
+  padding: 0 9%;
   display: flex;
   align-items: flex-start;
   gap: 20px;
   @media ${device.tablet} {
+    margin: 0;
     padding: 0;
     background-image: url(${formImage});
     width: 100%;
@@ -40,6 +41,7 @@ const ContactTitle = styled.h2`
   line-height: 1.33;
   color: #171715;
   margin: 0 0 40px 0;
+  padding: 0 30px;
   @media ${device.tablet} {
     display: none;
   }
@@ -52,6 +54,7 @@ const ContactSubtitle = styled.h3`
   line-height: 1.33;
   color: #171715;
   margin: 0 0 40px 0;
+  padding: 0 30px;
 `;
 
 const ContactForm = styled.form`
@@ -63,6 +66,8 @@ const ContactForm = styled.form`
   
   @media ${device.tablet} {
     background-color: rgba(217, 217, 217, 0.9);
+    /* max-width: 80%; */
+    justify-content: center;
   }
 `;
 
@@ -125,9 +130,18 @@ const ContactButton = styled.button`
   margin-top: 20px;
   width: 358px;
   height: 98px;
-  
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
   &:hover {
     background: #045a9e;
+  }
+  @media ${device.tablet} {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 100%;
   }
 `;
 
@@ -149,6 +163,18 @@ const ContactImage = styled.img`
 `;
 
 export default function Contact() {
+  const [isChecked, setIsChecked] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (isChecked) {
+      setIsSubmitted(true);
+      // add sending of form
+    } else {
+      alert('Пожалуйста, подтвердите согласие на обработку данных');
+    }
+  };
 // const Contact = () => {
   return (
     <ContactSection name="Contact">
@@ -156,7 +182,7 @@ export default function Contact() {
         <ContactContent>
           <ContactSubtitle>Свяжитесь с нами через телеграмм:</ContactSubtitle>
           
-          <ContactForm>
+          <ContactForm onSubmit={handleSubmit}>
             <FormField>
               <FormLabel>Ваше имя</FormLabel>
               <FormInput type="text" placeholder="Введите ваше имя" />
@@ -176,8 +202,17 @@ export default function Contact() {
               <FormLabel>Комментарий</FormLabel>
               <FormTextarea placeholder="Введите ваш комментарий" />
             </FormField>
+            <label>
+              <input
+                type="checkbox"
+                checked={isChecked}
+                onChange={(e) => setIsChecked(e.target.checked)}
+              />&nbsp;
+              Даю согласие на обработку данных
+            </label> 
             
-            <ContactButton>Отправить в телеграмм</ContactButton>
+            <ContactButton type="submit">Отправить в телеграмм</ContactButton>
+            {isSubmitted && <p>Форма успешно отправлена!</p>}
           </ContactForm>
            <ContactTitle>Контакт:</ContactTitle>
         </ContactContent>

@@ -9,16 +9,20 @@ const Overlay = styled.div`
   z-index: 9999;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
+  height: 100vh;
+  /* height: 100%; */
 `;
 
 const ModalBox = styled.div`
   position: relative;
+  margin-top: 5vw;
   background: white;
   padding: 30px;
   border-radius: 10px;
-  max-width: 600px;
-  width: 90%;
+  max-width: 76%;
+  width: 76%;
+  overflow: scroll;
 `;
 
 const Modal = ({ isOpen, onClose, children }) => {
