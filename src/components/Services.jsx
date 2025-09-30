@@ -4,7 +4,7 @@ import wallImage from '../assets/Wall-image.svg';
 import florImage from '../assets/Flor-image.svg';
 import adverticingImage from '../assets/Adverticing-image.svg';
 import personalImage from '../assets/Personal-image.svg';
-import { device } from './device';
+import { device } from './Device';
 import Modal from './Modal';
 import Slider from './Slider';
 import imgGallery1 from '../assets/Gallery1.png'

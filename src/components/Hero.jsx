@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components';
 import frontImage from "../assets/front-image.png";
 import logoImage from "../assets/logo.svg";
 import { Link } from "react-scroll";
-import { device } from "./device";
+import { device } from "./Device";
 // import Modal from "./Modal";
 import MenuButton from "../assets/Mobile-menu.svg";
 
