@@ -473,7 +473,7 @@ const Hero = () => {
           </HeroText>
 
           <HeroImageContainer>
-            <FrontImage src={frontImage} alt="3D Design Front" />
+            <FrontImage loading="lazy" src={frontImage} alt="3D Design Front" />
           </HeroImageContainer>
         </HeroContent>
       </HeroContainer>

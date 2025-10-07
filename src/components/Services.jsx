@@ -289,47 +289,47 @@ const VideoButton = styled.button`
           <Modal isOpen={!!modalContent} onClose={closeModal}>
             <Slider>
               <GallaryContainer>
-                <Gallery src={imgGallery1} alt="First image of slider."/>
+                <Gallery loading="lazy" src={imgGallery1} alt="First image of slider."/>
                 <TextTop>Для детской</TextTop>
                 <Text>Для детской</Text>
               </GallaryContainer>
               <GallaryContainer>
-                <Gallery src={imgGallery2} alt="Second image of slider."/>
+                <Gallery loading="lazy" src={imgGallery2} alt="Second image of slider."/>
                 <TextTop>Воздух</TextTop>
                 <Text>Воздух</Text>
               </GallaryContainer>
               <GallaryContainer>
-                <Gallery src={imgGallery3} alt="Third image of slider."/>
+                <Gallery loading="lazy" src={imgGallery3} alt="Third image of slider."/>
                 <TextTop>Фэн-шуй</TextTop>
                 <Text>Фэн-шуй</Text>
               </GallaryContainer>
               <GallaryContainer>
-              <Gallery src={imgGallery4} alt="Fourth image of slider."/>
+              <Gallery loading="lazy" src={imgGallery4} alt="Fourth image of slider."/>
                 <TextTop>Животные</TextTop>
                 <Text>Животные</Text>
               </GallaryContainer>
               <GallaryContainer>
-                <Gallery src={imgGallery5} alt="Fifth image of slider."/>
+                <Gallery loading="lazy" src={imgGallery5} alt="Fifth image of slider."/>
                 <TextTop>Экзотика</TextTop>
                 <Text>Экзотика</Text>
               </GallaryContainer>
               <GallaryContainer>
-                <Gallery src={imgGallery6} alt="Sixsth image of slider."/>
+                <Gallery loading="lazy" src={imgGallery6} alt="Sixsth image of slider."/>
                 <TextTop>Мультики</TextTop>
                 <Text>Мультики</Text>
               </GallaryContainer>
               <GallaryContainer>
-              <Gallery src={imgGallery7} alt="Seventh image of slider."/>
+              <Gallery loading="lazy" src={imgGallery7} alt="Seventh image of slider."/>
                 <TextTop>Райские дали</TextTop>
                 <Text>Райские дали</Text>
               </GallaryContainer>
               <GallaryContainer>
-                <Gallery src={imgGallery8} alt="Eith image of slider."/>
+                <Gallery loading="lazy" src={imgGallery8} alt="Eith image of slider."/>
                 <TextTop>Котики</TextTop>
                 <Text>Котики</Text>
               </GallaryContainer>
               <GallaryContainer>
-                <Gallery src={imgGallery9} alt="Ninth image of slider."/>
+                <Gallery loading="lazy" src={imgGallery9} alt="Ninth image of slider."/>
                 <TextTop>Цветы</TextTop>
                 <Text>Цветы</Text>
               </GallaryContainer>
