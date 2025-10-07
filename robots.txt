@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://olgapotapova.github.io/Printer/sitemap.xml
