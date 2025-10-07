@@ -181,7 +181,7 @@ const Footer = () => {
               <a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener noreferrer">
                 <SocialIcon src={instagramImage} alt="Instagram icon." />
               </a> 
-              <a href="https://t.me/@DDesignInvest" target="_blank" rel="noopener noreferrer">
+              <a href="https://t.me/DDesignInvest" target="_blank" rel="noopener noreferrer">
                 <SocialIcon src={telegrammImage} alt="Instagram icon." />
               </a> 
               <a style={{ display: 'none' }} href="https://www.tiktok.com/@yourusername" target="_blank" rel="noopener noreferrer">
