@@ -13,7 +13,7 @@ const SliderWrapper = styled.div`
 const SlideTrack = styled.div`
   display: flex;
   transition: transform 0.4s ease;
-  transform: translateX(${(props) => `-${props.index * 100}%`});
+  transform: translateX(${({ $index }) => `-${$index * 100}%`});
 `;
 
 const Slide = styled.div`
@@ -33,16 +33,14 @@ const Arrow = styled.button`
   cursor: pointer;
   z-index: 10;
   font-size: 40px;
-
-  ${(props) => props.left && 'left: 10px;'}
-  ${(props) => props.right && 'right: 10px;'}
+  ${({ $left }) => $left && 'left: 10px;'}
+  ${({ $right }) => $right && 'right: 10px;'}
 
   @media (max-width: 480px) {
     font-size: 30px;
     padding: 8px;
-
-    ${(props) => props.left && 'left: -10px;'}
-    ${(props) => props.right && 'right: -10px;'}
+    ${({ $left }) => $left && 'left: -10px;'}
+    ${({ $right }) => $right && 'right: -10px;'}
   }
 `;
 
@@ -61,10 +59,10 @@ const Slider = ({ children }) => {
 
   return (
     <SliderWrapper {...swipeHandlers}>
-      <Arrow left onClick={prev}>&#9668;</Arrow>
-      <Arrow right onClick={next}>&#9658;</Arrow>
-      <SlideTrack index={index}>
-        {React.Children.map(children, (child, i) => (
+      <Arrow $left onClick={prev}>&#9668;</Arrow>
+      <Arrow $right onClick={next}>&#9658;</Arrow>
+          <SlideTrack $index={index}>
+            {React.Children.map(children, (child, i) => (
           <Slide key={i}>{child}</Slide>
         ))}
       </SlideTrack>

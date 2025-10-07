@@ -1,4 +1,5 @@
 import React from 'react';
+import CookieModal from './components/CookieModal';
 
 import {
   Hero,
@@ -6,7 +7,7 @@ import {
   Advantages,
   Video,
   FAQ,
-  Contact,
+  // Contact,
   Footer
 } from './components';
 import './App.css';
@@ -14,6 +15,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+      <CookieModal />
       <Hero />
       <Services/>
       <div className='container'>
@@ -21,7 +23,7 @@ function App() {
         <Video />
       </div>
       <FAQ />
-      <Contact />
+      {/* <Contact /> */}
       <Footer />
     </div>
   );

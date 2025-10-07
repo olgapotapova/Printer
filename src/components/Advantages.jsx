@@ -4,7 +4,7 @@ import timeImage from '../assets/Time-image.svg';
 import surfaceImage from '../assets/Surface-image.svg';
 import weekendImage from '../assets/Weekend-image.svg';
 import visualizationImage from '../assets/Visualization-image.svg';
-import { device } from './device';
+import { device } from './Device';
 import Slider from './Slider';
 
 
@@ -103,22 +103,22 @@ export default function Advantages() {
     {
       text: 'Печать за 1 день без демонтажа и ремонта.',
       icon: timeImage,
-      title: ''
+      title: 'Скорость'
     },
     {
       text: '20+ поверхностей: бетон, плитка, стекло...',
       icon: surfaceImage,
-      title: ''
+      title: 'Поверхности'
     },
     {
       text: 'Работа в выходные и праздники.',
       icon: weekendImage,
-      title: ''
+      title: 'Поверхности'
     },
     {
       text: 'Бесплатная визуализация перед началом работ.',
       icon: visualizationImage,
-      title: ''
+      title: 'Визуализация'
     }
   ];
 
@@ -146,6 +146,25 @@ export default function Advantages() {
               ))}
             </Slider>  
           </AdvantagesGridMobile>
+                  {/* <AdvantagesGrid>
+          {advantages.map((advantage, i) => (
+            <AdvantageCard key={`desktop-${i}`}>
+              <AdvantageIcon src={advantage.icon} alt={advantage.title} />
+              <AdvantageText>{advantage.text}</AdvantageText>
+            </AdvantageCard>
+          ))}
+        </AdvantagesGrid>
+
+        <AdvantagesGridMobile>
+          <Slider>
+            {advantages.map((advantage, i) => (
+              <AdvantageCard key={`mobile-${i}`}>
+                <AdvantageIcon src={advantage.icon} alt={advantage.title} />
+                <AdvantageText>{advantage.text}</AdvantageText>
+              </AdvantageCard>
+            ))}
+          </Slider>
+        </AdvantagesGridMobile> */}
 
       </AdvantagesContainer>
     </AdvantagesSection>

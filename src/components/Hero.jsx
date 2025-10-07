@@ -461,10 +461,10 @@ const Hero = () => {
             </HeroButton>
 
             <Modal isOpen={!!modalContent} onClose={closeModal}>
-              {modalContent}
+              {modalContent} ID=8404785778
             </Modal> */}
             <HeroButton onClick={() => openModal(<p>Контактная форма</p>)}>
-              <a href="https://t.me/+372 5802 2760" target="_blank" rel="noopener noreferrer">
+              <a style={{color: 'white', textDecoration: 'none', fontSize: '17px' }} href="https://t.me/@DDesignInvest" target="_blank" rel="noopener noreferrer">
                 Получить бесплатную визуализацию
               </a>
             </HeroButton>

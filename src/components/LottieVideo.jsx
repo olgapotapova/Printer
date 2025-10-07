@@ -1,4 +1,3 @@
-// import { Player } from '@lottiefiles/react-lottie-player';
 import React from 'react';
 import Lottie from 'lottie-react';
 import animationData from '../assets/lottie/animation.json';
@@ -16,6 +15,7 @@ const LottieVideo = () => {
         animationData={animationData}
         loop={true}
         autoplay={true}
+        initialSegment={[0, 90]}
       />
     </LottieContainer>
   );
