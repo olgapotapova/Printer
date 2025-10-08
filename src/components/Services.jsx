@@ -155,6 +155,9 @@ const ServiceText = styled.div`
   display: flex;
   flex-direction: column;
   padding: 10px 50px 10px 0;
+  @media ${device.tablet} {
+    padding: 10px 10px 10px 0;
+  }
 `;
 
 const ServiceTitle = styled.h3`
