@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-// import videoCapture from '../assets/video-capture.png';
 import secondaryImage from '../assets/secondary-image.png';
 import { device } from './Device';
 import LottieVideo from './LottieVideo';

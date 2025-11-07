@@ -4,8 +4,16 @@ import frontImage from "../assets/front-image.png";
 import logoImage from "../assets/logo.svg";
 import { Link } from "react-scroll";
 import { device } from "./Device";
-// import Modal from "./Modal";
 import MenuButton from "../assets/Mobile-menu.svg";
+import { useTranslation } from 'react-i18next';
+
+
+const languages = [
+  { code: 'en', label: 'Aнг' },
+  { code: 'et', label: 'Эст' },
+  { code: 'ru', label: 'Рус' },
+  { code: 'fi', label: 'Фин' },
+];
 
 const fadeIn = keyframes`
   from {
@@ -198,10 +206,10 @@ const ScrollButton = styled.button`
 `;
 
 const LanguageSelector = styled.div`
+  position: relative;
+  /* display: inline-block; */
   display: flex;
-  display: none;
-  align-items: center;
-  gap: 20px;
+  justify-content: center;
   border: solid black 1px;
   padding: 8px 16px;
   border-radius: 6px;
@@ -211,6 +219,7 @@ const LanguageSelector = styled.div`
   font-weight: 600;
   max-width: 65px;
   margin-right: 30px;
+  cursor: pointer;
     @media ${device.tablet} {
     margin: auto;
     font-size: 16px;
@@ -218,10 +227,57 @@ const LanguageSelector = styled.div`
   }
 `;
 
-const Arrow = styled.span`
+const ArrowButton = styled.button`
   display: block;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font: inherit;
+  background: transparent;
   @media ${device.tablet} {
-    display: none;
+    /* display: none; */
+  }
+`;
+
+const Arrow = styled.span`
+  position: absolute;
+  top: 30%;
+  left: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  margin-left: 8px;
+  transition: transform 0.2s ease;
+  transform: ${({ isOpenLang }) => (isOpenLang ? 'rotate(180deg)' : 'rotate(0deg)')};
+  @media ${device.tablet} {
+    /* display: none; */
+  }
+`;
+
+const DropdownLang = styled.ul`
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: transparents;
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 0 0;
+  width: 100%;
+  z-index: 10;
+  transition: transform 0.2s ease;
+  @media ${device.tablet} {
+    /* display: none; */
+  }
+`;
+
+const DropdownLangLi = styled.li`
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+  padding-left: 20%;
+  &:hover{
+    background-color: #e0e0e0;
   }
 `;
 
@@ -361,6 +417,30 @@ const Button = styled.button`
 `;
 
 const Hero = () => {
+
+  const { t, i18n } = useTranslation();
+  // const [selectedLang, setSelectedLang] = useState('ru');
+  const [selectedLang, setSelectedLang] = useState(() => {
+    return localStorage.getItem('lang') || 'ru';
+  });
+
+  useEffect(() => {
+    i18n.changeLanguage(selectedLang);
+  }, [selectedLang]);
+
+  const [isOpenLang, setIsOpenLang] = useState(false);
+
+  const toggleDropdown = () => setIsOpenLang(!isOpenLang);
+
+  const selectLanguage = (code) => {
+    setSelectedLang(code);         //update local state
+    i18n.changeLanguage(code);     //switching the language in i18next
+    localStorage.setItem('lang', code); //saving to localStorage
+    setIsOpenLang(false);          //closing dropdown
+  };
+
+  const currentLabel = languages.find(lang => lang.code === selectedLang)?.label;
+
   const [modalContent, setModalContent] = useState(null);
   const openModal = (content) => setModalContent(content);
   const closeModal = () => setModalContent(null);
@@ -400,10 +480,30 @@ const Hero = () => {
             <LogoText>3D-Design invest</LogoText>
           </Logo>
           <Navigation>
+
             <LanguageSelector>
+              {isOpenLang && (
+                <DropdownLang className="dropdown">
+                  {languages.map(lang => (
+                    <DropdownLangLi
+                      key={lang.code}
+                      className={lang.code === selectedLang ? 'active' : ''}
+                      onClick={() => selectLanguage(lang.code)}
+                    >
+                      {lang.label}
+                    </DropdownLangLi>
+                  ))}
+                </DropdownLang>
+              )}
+              <ArrowButton onClick={toggleDropdown}>
+                {currentLabel} <Arrow>▼</Arrow>
+              </ArrowButton>
+            </LanguageSelector>
+
+            {/* <LanguageSelector>
               Рус
               <Arrow>▼</Arrow>
-            </LanguageSelector>
+            </LanguageSelector> */}
             {/* <MenuImage src={MenuButton} alt=""></MenuImage> */}
 
             <MenuWrapper ref={menuRef}>
@@ -414,17 +514,17 @@ const Hero = () => {
                 <DropdownUl>
                   <li>
                     <Link to="Services" smooth={true} duration={500}>
-                      <ScrollButtonMenu onClick={toggleMenu}>Портфолио</ScrollButtonMenu>
+                      <ScrollButtonMenu onClick={toggleMenu}>{t('menu.portfolio')}</ScrollButtonMenu>
                     </Link>
                   </li>
                   <li>
                     <Link to="Advantages" smooth={true} duration={500}>
-                    <ScrollButtonMenu onClick={toggleMenu}>Преимущества</ScrollButtonMenu>
+                    <ScrollButtonMenu onClick={toggleMenu}>{t('menu.benefits')}</ScrollButtonMenu>
                     </Link>
                   </li>
                   <li>
                     <Link to="Contact" smooth={true} duration={500}>
-                    <ScrollButtonMenu onClick={toggleMenu}>Контакт</ScrollButtonMenu>
+                    <ScrollButtonMenu onClick={toggleMenu}>{t('menu.contact')}</ScrollButtonMenu>
                     </Link>
                   </li>
                 </DropdownUl>
@@ -447,17 +547,16 @@ const Hero = () => {
 
         <HeroContent>
           <HeroText>
-            <HeroTitle>
-              Оживи стены
-              <br/>в стиле 3D
-            </HeroTitle>
-            <HeroSubtitle>
-              3D-печать на любых поверхностях без ремонта и пыли. В Таллинне,
+            <HeroTitle style={{ whiteSpace: 'pre-line' }}>{t('heroTitle')}</HeroTitle>
+            <HeroSubtitle style={{ whiteSpace: 'pre-line' }}>
+              {/* 3D-печать на любых поверхностях без ремонта и пыли. В Таллинне,
               Тарту, Нарве, Пярну, <br />
-              Хельсинки...
+              Хельсинки... */}
+              {t('heroSubtitle')}
             </HeroSubtitle>
+
             {/* <HeroButton onClick={() => openModal(<p>Контактная форма</p>)}>
-              Получить бесплатную визуализацию
+              {t('cta')}
             </HeroButton>
 
             <Modal isOpen={!!modalContent} onClose={closeModal}>
@@ -465,7 +564,8 @@ const Hero = () => {
             </Modal> */}
             <HeroButton onClick={() => openModal(<p>Контактная форма</p>)}>
               <a style={{color: 'white', textDecoration: 'none', fontSize: '17px' }} href="https://t.me/DDesignInvest" target="_blank" rel="noopener noreferrer">
-                Получить бесплатную визуализацию
+                {/* Получить бесплатную визуализацию */}
+                {t('cta')}
               </a>
             </HeroButton>
 

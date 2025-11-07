@@ -6,7 +6,7 @@ import weekendImage from '../assets/Weekend-image.svg';
 import visualizationImage from '../assets/Visualization-image.svg';
 import { device } from './Device';
 import Slider from './Slider';
-
+import { useTranslation } from 'react-i18next';
 
 const AdvantagesSection = styled.section`
   position: relative;
@@ -99,37 +99,54 @@ const AdvantageText = styled.p`
 `;
 
 export default function Advantages() {
-  const advantages = [
-    {
-      text: 'Печать за 1 день без демонтажа и ремонта.',
-      icon: timeImage,
-      title: 'Скорость'
-    },
-    {
-      text: '20+ поверхностей: бетон, плитка, стекло...',
-      icon: surfaceImage,
-      title: 'Поверхности'
-    },
-    {
-      text: 'Работа в выходные и праздники.',
-      icon: weekendImage,
-      title: 'Поверхности'
-    },
-    {
-      text: 'Бесплатная визуализация перед началом работ.',
-      icon: visualizationImage,
-      title: 'Визуализация'
-    }
-  ];
+
+  const { t } = useTranslation();
+
+  const advantages = t('advantages', { returnObjects: true });
+
+  // const advantages = [
+  //   {
+  //     text: 'Печать за 1 день без демонтажа и ремонта.',
+  //     icon: timeImage,
+  //     title: 'Скорость'
+  //   },
+  //   {
+  //     text: '20+ поверхностей: бетон, плитка, стекло...',
+  //     icon: surfaceImage,
+  //     title: 'Поверхности'
+  //   },
+  //   {
+  //     text: 'Работа в выходные и праздники.',
+  //     icon: weekendImage,
+  //     title: 'Поверхности'
+  //   },
+  //   {
+  //     text: 'Бесплатная визуализация перед началом работ.',
+  //     icon: visualizationImage,
+  //     title: 'Визуализация'
+  //   }
+  // ];
 
   return (
     <AdvantagesSection name="Advantages">
       <AdvantagesContainer>
-        <AdvantagesTitle>Почему мы?</AdvantagesTitle>
+        <AdvantagesTitle>{t('advantagesTitle')}</AdvantagesTitle>
         <AdvantagesGrid>
           {advantages.map((advantage, index) => (
+            // <AdvantageCard key={index}>
+            //   <AdvantageIcon src={advantage.icon} alt={advantage.title}/>
+            //   <AdvantageText>{advantage.text}</AdvantageText>
+            // </AdvantageCard>
             <AdvantageCard key={index}>
-              <AdvantageIcon src={advantage.icon} alt={advantage.title}/>
+              <AdvantageIcon
+                src={
+                  index === 0 ? timeImage :
+                  index === 1 ? surfaceImage :
+                  index === 2 ? weekendImage :
+                  visualizationImage
+                }
+                alt={advantage.title}
+              />
               <AdvantageText>{advantage.text}</AdvantageText>
             </AdvantageCard>
 
@@ -139,8 +156,20 @@ export default function Advantages() {
         <AdvantagesGridMobile>
             <Slider>
               {advantages.map((advantage, index) => (
+              // <AdvantageCard key={index}>
+              //   <AdvantageIcon src={advantage.icon} alt={advantage.title}/>
+              //   <AdvantageText>{advantage.text}</AdvantageText>
+              // </AdvantageCard>
               <AdvantageCard key={index}>
-                <AdvantageIcon src={advantage.icon} alt={advantage.title}/>
+                <AdvantageIcon
+                  src={
+                    index === 0 ? timeImage :
+                    index === 1 ? surfaceImage :
+                    index === 2 ? weekendImage :
+                    visualizationImage
+                  }
+                  alt={advantage.title}
+                />
                 <AdvantageText>{advantage.text}</AdvantageText>
               </AdvantageCard>
               ))}

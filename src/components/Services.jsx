@@ -16,6 +16,7 @@ import imgGallery6 from '../assets/Gallery6.png'
 import imgGallery7 from '../assets/Gallery7.png'
 import imgGallery8 from '../assets/Gallery8.png'
 import imgGallery9 from '../assets/Gallery9.png'
+import { useTranslation } from 'react-i18next'
 
 const GallaryContainer = styled.div`
   position: relative;
@@ -235,37 +236,45 @@ const VideoButton = styled.button`
 
 //  const Services = () => {
   export default function Services() {
+    const { t } = useTranslation();
+    const services = t('services.list', { returnObjects: true });
+    const galleryLabels = t('services.gallery', { returnObjects: true });
     const [modalContent, setModalContent] = useState(null);
     const openModal = (content) => setModalContent(content);
     const closeModal = () => setModalContent(null);
 
-  const services = [
-    {
-      title: '3D-печать на стенах',
-      description: 'Яркие трёхмерные или двухмерные рисунки, нанесённые непосредственно на стены.',
-      src: wallImage
-    },
-    {
-      title: '3D-печать на полу',
-      description: 'Привлекающие внимание арт-объекты на полу как продолжение дизайна стен или отдельно.',
-      src: florImage
-    },
-        {
-      title: 'Наружная и внутренняя реклама',
-      description: 'Печать рекламы и логотипов фирм, гостиниц, государственных учреждений.',
-      src: adverticingImage
-    },
-    {
-      title: 'Индивидуальный дизайн',
-      description: 'Индивидуальные визуальные решения с учётом особенностей вашего пространства и стиля.',
-      src: personalImage
-    }
-  ];
+    const imgGalleryList = [
+      imgGallery1, imgGallery2, imgGallery3, imgGallery4, imgGallery5,
+      imgGallery6, imgGallery7, imgGallery8, imgGallery9
+    ];
+
+  // const services = [
+  //   {
+  //     title: '3D-печать на стенах',
+  //     description: 'Яркие трёхмерные или двухмерные рисунки, нанесённые непосредственно на стены.',
+  //     src: wallImage
+  //   },
+  //   {
+  //     title: '3D-печать на полу',
+  //     description: 'Привлекающие внимание арт-объекты на полу как продолжение дизайна стен или отдельно.',
+  //     src: florImage
+  //   },
+  //       {
+  //     title: 'Наружная и внутренняя реклама',
+  //     description: 'Печать рекламы и логотипов фирм, гостиниц, государственных учреждений.',
+  //     src: adverticingImage
+  //   },
+  //   {
+  //     title: 'Индивидуальный дизайн',
+  //     description: 'Индивидуальные визуальные решения с учётом особенностей вашего пространства и стиля.',
+  //     src: personalImage
+  //   }
+  // ];
 
   return (    
     <ServicesSection name="Services">
       <ServicesContainer>
-        <ServicesTitle>Наши услуги:</ServicesTitle>
+        <ServicesTitle>{t('services.title')}</ServicesTitle>
         <ServicesFlex>
           {services.map((service, index) => (
             <ServiceCard key={index}>
@@ -280,17 +289,26 @@ const VideoButton = styled.button`
       </ServicesContainer>
 
         <VideoContent>
-          <VideoTitle>Оживи своё пространство</VideoTitle>
-          <VideoDescription>
-            Украсьте свои дома, частные резиденции, детские сады и другие помещения с помощью потрясающих <br/>3D-принтов.
+          <VideoTitle>{t('services.videoTitle')}</VideoTitle>
+          <VideoDescription style={{ whiteSpace: 'pre-line' }}>
+            {t('services.videoDescription')}
           </VideoDescription>
 
           <VideoButton onClick={() => openModal(<p>Контактная форма</p>)}>
-            Смотреть кейсы
+            {t('services.button')}
           </VideoButton>
 
           <Modal isOpen={!!modalContent} onClose={closeModal}>
             <Slider>
+            {galleryLabels.map((label, index) => (
+              <GallaryContainer key={index}>
+                <Gallery loading="lazy" src={imgGalleryList[index]} alt={`Gallery image ${index + 1}`} />
+                <TextTop>{label}</TextTop>
+                <Text>{label}</Text>
+              </GallaryContainer>
+            ))}
+          </Slider>
+            {/* <Slider>
               <GallaryContainer>
                 <Gallery loading="lazy" src={imgGallery1} alt="First image of slider."/>
                 <TextTop>Для детской</TextTop>
@@ -336,7 +354,7 @@ const VideoButton = styled.button`
                 <TextTop>Цветы</TextTop>
                 <Text>Цветы</Text>
               </GallaryContainer>
-            </Slider>        
+            </Slider>         */}
           </Modal>
 
         </VideoContent>

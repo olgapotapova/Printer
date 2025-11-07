@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useSwipeable } from 'react-swipeable';
+import { useTranslation } from 'react-i18next';
 
 const SliderWrapper = styled.div`
   position: relative;

@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import formImage from '../assets/form-image.png';
 // import girlWithTree from '../assets/girl-with-tree.png';
-import { device } from './device';
+import { device } from './Device';
+import { useTranslation } from 'react-i18next';
 
 const ContactSection = styled.section`
   padding: 100px 0;
@@ -163,6 +164,8 @@ const ContactImage = styled.img`
 `;
 
 export default function Contact() {
+
+  const { t } = useTranslation();
   const [isChecked, setIsChecked] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -180,27 +183,38 @@ export default function Contact() {
     <ContactSection name="Contact">
       <ContactContainer>
         <ContactContent>
-          <ContactSubtitle>Свяжитесь с нами через телеграмм:</ContactSubtitle>
+          <ContactSubtitle>
+            {/* Свяжитесь с нами через телеграмм: */}
+            {t('contactSubtitle')}
+            </ContactSubtitle>
           
           <ContactForm onSubmit={handleSubmit}>
             <FormField>
-              <FormLabel>Ваше имя</FormLabel>
-              <FormInput type="text" placeholder="Введите ваше имя" />
+              {/* <FormLabel>Ваше имя</FormLabel> */}
+               <FormLabel>{t('form.nameLabel')}</FormLabel>
+                <FormInput type="text" placeholder={t('form.namePlaceholder')} />
+              {/* <FormInput type="text" placeholder="Введите ваше имя" /> */}
             </FormField>
             
             <FormField>
-              <FormLabel>Телефон</FormLabel>
-              <FormInput type="tel" placeholder="Введите ваш телефон" />
+              <FormLabel>{t('form.phoneLabel')}</FormLabel>
+              <FormInput type="tel" placeholder={t('form.phonePlaceholder')} />
+              {/* <FormLabel>Телефон</FormLabel>
+              <FormInput type="tel" placeholder="Введите ваш телефон" /> */}
             </FormField>
             
             <FormField>
-              <FormLabel>Емейл</FormLabel>
-              <FormInput type="email" placeholder="Введите ваш email" />
+              <FormLabel>{t('form.emailLabel')}</FormLabel>
+              <FormInput type="email" placeholder={t('form.emailPlaceholder')} />
+              {/* <FormLabel>Емейл</FormLabel>
+              <FormInput type="email" placeholder="Введите ваш email" /> */}
             </FormField>
             
             <FormField>
-              <FormLabel>Комментарий</FormLabel>
-              <FormTextarea placeholder="Введите ваш комментарий" />
+              <FormLabel>{t('form.commentLabel')}</FormLabel>
+              <FormTextarea placeholder={t('form.commentPlaceholder')} />
+              {/* <FormLabel>Комментарий</FormLabel>
+              <FormTextarea placeholder="Введите ваш комментарий" /> */}
             </FormField>
             <label>
               <input
@@ -208,13 +222,21 @@ export default function Contact() {
                 checked={isChecked}
                 onChange={(e) => setIsChecked(e.target.checked)}
               />&nbsp;
-              Даю согласие на обработку данных
+              {t('form.consent')}
+              {/* Даю согласие на обработку данных */}
             </label> 
             
-            <ContactButton type="submit">Отправить в телеграмм</ContactButton>
-            {isSubmitted && <p>Форма успешно отправлена!</p>}
+            <ContactButton type="submit">
+              {/* Отправить в телеграмм */}
+              {t('form.submit')}
+            </ContactButton>
+             {isSubmitted && <p>{t('form.success')}</p>}
+            {/* {isSubmitted && <p>Форма успешно отправлена!</p>} */}
           </ContactForm>
-           <ContactTitle>Контакт:</ContactTitle>
+           <ContactTitle>
+            {/* Контакт: */}
+            {t('contactTitle')}
+           </ContactTitle>
         </ContactContent>
         
         <ContactImages>

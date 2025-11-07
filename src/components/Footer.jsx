@@ -5,6 +5,7 @@ import instagramImage from '../assets/Instagram-logo.svg';
 import metaImage from '../assets/Meta-logo.svg';
 import telegrammImage from '../assets/Telegramm.svg';
 import { device } from './Device';
+import { useTranslation } from 'react-i18next';
 
 const FooterSection = styled.footer`
   background: #228091;
@@ -82,7 +83,7 @@ const FooterLinks = styled.div`
   gap: 10px;
 `;
 
-const FooterLink = styled.p`
+const FooterLink = styled.div`
   font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   font-weight: 600;
@@ -138,6 +139,7 @@ const Copyright = styled.p`
 `;
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <FooterSection>
       <FooterContainer>
@@ -146,14 +148,16 @@ const Footer = () => {
             <FooterLinks>
             <FooterLink>
               <FooterText>
-                Регистрационный номер:
+                {t('footer.registration')}
+                {/* Регистрационный номер: */}
               </FooterText>
                 &emsp;12610850
             </FooterLink>
 
             <FooterLink>
               <FooterText>
-                Телефон:
+                {t('footer.phone')}
+                {/* Телефон: */}
               </FooterText>
               <DataLink href="tel:+37255509777" target="_blank" rel="noopener noreferrer">
                 &emsp;+37255509777
@@ -162,7 +166,8 @@ const Footer = () => {
 
             <FooterLink>
               <FooterText>
-                Эл. почта:
+                {t('footer.email')}
+                {/* Эл. почта: */}
               </FooterText>
               <DataLink href="mailto:3ddesigninvest@gmail.com" target="_blank" rel="noopener noreferrer">
                 &emsp;3ddesigninvest@gmail.com 
@@ -173,7 +178,10 @@ const Footer = () => {
           </FooterColumn>
           
           <FooterColumn>
-            <FooterText>Мы в соц. сетях:</FooterText>
+            <FooterText>
+              {/* Мы в соц. сетях: */}
+              {t('footer.social')}
+            </FooterText>
             <SocialIcons>
               <a href="https://www.facebook.com/share/1JMboyMb3B" target="_blank" rel="noopener noreferrer">
                 <SocialIcon src={metaImage} alt="Meta icon." />
@@ -192,9 +200,9 @@ const Footer = () => {
           
           <FooterColumn>
             <FooterLinks>
-              <FooterLink href="#privacy">Политика безопасности</FooterLink>
-              <FooterLink href="#cookies">Куки-файлы</FooterLink>
-              <FooterLink href="#about">О компании</FooterLink>
+              <FooterLink href="#privacy">{t('footer.privacy')}</FooterLink>
+              <FooterLink href="#cookies">{t('footer.cookies')}</FooterLink>
+              <FooterLink href="#about">{t('footer.about')}</FooterLink>
             </FooterLinks>
           </FooterColumn>
 
@@ -204,7 +212,8 @@ const Footer = () => {
               © 2025, 3D-Design.
             </Copyright>
             <Copyright>
-              All Rights Reserved   
+              {t('footer.rights')}
+              {/* All Rights Reserved    */}
             </Copyright>
             </FooterLinks>
         </FooterColumn>
@@ -213,8 +222,7 @@ const Footer = () => {
 
         
         <FooterDescription>
-          Мы - команда дизайнеров и печатников, работающая в Эстонии и Финляндии. 
-          Наша миссия - превращать обычные стены в источник вдохновения, обучения и радости.
+          {t('footer.description')}
         </FooterDescription>
         
 

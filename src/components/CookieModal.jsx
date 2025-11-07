@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import cupcakeIcon from '../assets/Cupcake.svg';
+import { useTranslation } from 'react-i18next';
 
 const ModalWrapper = styled.div`
   position: fixed;
@@ -116,6 +117,7 @@ const CloseButton = styled.button`
 
 const CookieModal = () => {
   const [showModal, setShowModal] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const consent = localStorage.getItem('cookieConsent');
@@ -133,20 +135,25 @@ const CookieModal = () => {
     <ModalWrapper>
       <Icon src={cupcakeIcon} alt="Cupcake icon" />
       <Content>
-        <Title>Файлы cookie</Title>
+        <Title>{t('cookie.title')}</Title>
         <Text>
-          Мы используем cookie-файлы, чтобы сделать ваш опыт на нашем сайте максимально комфортным. Cookie помогают нам:
+          {t('cookie.intro')}
         </Text>
-        <List>
+        {/* <List>
           <ListItem>Запоминать ваши предпочтения и настройки;</ListItem>
           <ListItem>Анализировать поведение на сайте для улучшения сервиса;</ListItem>
           <ListItem>Показывать релевантную рекламу и предложения.</ListItem>
+        </List> */}
+        <List>
+          {t('cookie.benefits', { returnObjects: true }).map((item, index) => (
+            <ListItem key={index}>{item}</ListItem>
+          ))}
         </List>
         <Text>
-          Вы можете изменить настройки cookie в любое время в настройках вашего браузера. Продолжая использовать сайт, вы соглашаетесь с нашей политикой использования cookie.
+          {t('cookie.details')}
         </Text>
         <ButtonRow>
-          <AcceptButton onClick={handleAccept}>Принять</AcceptButton>
+          <AcceptButton onClick={handleAccept}>{t('cookie.accept')}</AcceptButton>
         </ButtonRow>
       </Content>
       <CloseButton onClick={handleAccept}>×</CloseButton>

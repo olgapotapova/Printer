@@ -14,10 +14,13 @@
   },
   "dependencies": {
     "gh-pages": "^6.3.0",
+    "i18next": "^25.6.0",
+    "i18next-http-backend": "^3.0.2",
     "js-cookie": "^3.0.5",
     "lottie-react": "^2.4.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-i18next": "^16.2.3",
     "react-scroll": "^1.9.3",
     "react-swipeable": "^7.0.2",
     "styled-components": "^6.1.19"

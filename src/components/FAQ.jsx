@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import RobotImage from '../assets/Machine-image.svg';
-import { device } from './device';
+import { device } from './Device';
 import Modal from "./Modal";
+import { useTranslation } from 'react-i18next';
 
 const FAQSection = styled.section`
   padding: 100px 0;
@@ -122,32 +123,30 @@ const FAQIcon = styled.img`
 `;
 
 const FAQ = () => {
+  const { t } = useTranslation();
+  const faqItems = t('faq.items', { returnObjects: true });
   const [modalContent, setModalContent] = useState(null);
   const openModal = (content) => setModalContent(content);
   const closeModal = () => setModalContent(null);
 
-  const faqItems = [
-        {
-          question: 'Можно ли печатать на фактурной стене?',
-          answer: 'Да, на фактурной стене печатать можно, но нужно понимать, что многое будет зависеть от фактуры, в некоторых случаях, краска не будет попадать в углубления, а будет расположена лишь на выступах. Если такой вариант вас устраивает, тогда печатать можно.'
-        },
-                {
-          question: 'Работаетем ли мы с дизайном клиента?',
-          answer: 'Да, мы работаем с дизайном клиента: вы можете найти в интернете изображение, создать его с помощью ИИ или прислать нам фотографию, с которой мы сами удалим фон. Вы можете также заказать стилизацию у любого постороннего дизайнера и предоставить макет нам.'
-        },
-                {
-          question: 'Как заказать услугу в Финляндии?',
-          answer: 'Заказать услугу в Финляндии можно точно так же, как и в Эстонии. Для этого необходимо заполнить форму и сообщение будет отправлено в Телеграмм, позже мы свяжемся с вами и обговорим подробности. '
-        },
-                {
-          question: 'Сколько держится изображение?',
-          answer: ' Изображение в помещении держится  10-15 лет и более, а на улице - от 3 лет и более  благодаря использованию UV-чернил, которые устойчивы к выцветанию и влаге. '
-        }
-    // 'Можно ли печатать на фактурной стене?',
-    // 'Работаетем ли мы с дизайном клиента?',
-    // 'Как заказать услугу в Финляндии?',
-    // 'Сколько держится изображение?'
-  ];
+  // const faqItems = [
+  //       {
+  //         question: 'Можно ли печатать на фактурной стене?',
+  //         answer: 'Да, на фактурной стене печатать можно, но нужно понимать, что многое будет зависеть от фактуры, в некоторых случаях, краска не будет попадать в углубления, а будет расположена лишь на выступах. Если такой вариант вас устраивает, тогда печатать можно.'
+  //       },
+  //               {
+  //         question: 'Работаетем ли мы с дизайном клиента?',
+  //         answer: 'Да, мы работаем с дизайном клиента: вы можете найти в интернете изображение, создать его с помощью ИИ или прислать нам фотографию, с которой мы сами удалим фон. Вы можете также заказать стилизацию у любого постороннего дизайнера и предоставить макет нам.'
+  //       },
+  //               {
+  //         question: 'Как заказать услугу в Финляндии?',
+  //         answer: 'Заказать услугу в Финляндии можно точно так же, как и в Эстонии. Для этого необходимо заполнить форму и сообщение будет отправлено в Телеграмм, позже мы свяжемся с вами и обговорим подробности. '
+  //       },
+  //               {
+  //         question: 'Сколько держится изображение?',
+  //         answer: ' Изображение в помещении держится  10-15 лет и более, а на улице - от 3 лет и более  благодаря использованию UV-чернил, которые устойчивы к выцветанию и влаге. '
+  //       }
+  // ];
 
   return (
     <FAQSection>
@@ -156,7 +155,7 @@ const FAQ = () => {
           <FAQIcon src={RobotImage} alt="Robot icon."/>
         </FAQImage>
         <FAQContent>
-          <FAQTitle>Часто спрашивают:</FAQTitle>
+          <FAQTitle>{t('faq.title')}</FAQTitle>
           <FAQList>
             {faqItems.map((item, index) => (
               <FAQItem key={index}>
@@ -166,17 +165,25 @@ const FAQ = () => {
           </FAQList>
 
           <FAQButton onClick={() => openModal(<p>Контактная форма</p>)}>
-              Читать ответы
+              {t('faq.button')}
           </FAQButton>
 
           <Modal isOpen={!!modalContent} onClose={closeModal}>
-            <FAQList>
+            {/* <FAQList>
               {faqItems.map((item, index) => (
               <FAQItem key={index}>
                 <Question>{item.question}</Question>
                 <Answer>{item.answer}</Answer>
               </FAQItem>
                ))}
+            </FAQList> */}
+            <FAQList>
+              {faqItems.map((item, index) => (
+                <FAQItem key={index}>
+                <Question>{item.question}</Question>
+                <Answer>{item.answer}</Answer>
+                </FAQItem>
+              ))}
             </FAQList>
           </Modal>
         </FAQContent>
