@@ -244,9 +244,10 @@ const VideoButton = styled.button`
     ];
 
     const services = t('services.list', { returnObjects: true });
+    const safeServices = Array.isArray(services) ? services : [];
 
     console.log('services:', services);
-    console.log('typeof services:', typeof services);
+console.log('isArray:', Array.isArray(services));
 
     const galleryLabels = t('services.gallery', { returnObjects: true });
     const [modalContent, setModalContent] = useState(null);

@@ -103,6 +103,7 @@ export default function Advantages() {
   const { t } = useTranslation();
 
   const advantages = t('advantages', { returnObjects: true });
+  const safeAdvantages = Array.isArray(advantages) ? advantages : [];
 
   // const advantages = [
   //   {
