@@ -419,6 +419,7 @@ const Button = styled.button`
 const Hero = () => {
 
   const { t, i18n } = useTranslation();
+  console.log('Active language:', i18n.language);
   // const [selectedLang, setSelectedLang] = useState('ru');
   const [selectedLang, setSelectedLang] = useState(() => {
     return localStorage.getItem('lang') || 'ru';
