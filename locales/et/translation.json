@@ -1,0 +1,123 @@
+{
+  "heroTitle": "Elusta seinad\n 3D-stiilis",
+  "heroSubtitle": "3D-printimine igasugustele pindadele ilma remondi ja tolmuta. Tallinnas, Tartus, Narvas, Pärnus,\n Helsingis...",
+  "cta": "Saada tasuta visualiseerimine",
+  "advantagesTitle": "Miks valida meid?",
+  "menu": {
+    "portfolio": "Portfoolio",
+    "benefits": "Eelised",
+    "contact": "Kontakt"
+  },
+  "advantages": [
+    {
+      "title": "Kiirus",
+      "text": "Printimine ühe päevaga ilma lammutuse ja remondita."
+    },
+    {
+      "title": "Pinnad",
+      "text": "20+ pinda: betoon, plaat, klaas..."
+    },
+    {
+      "title": "Nädalavahetused",
+      "text": "Töö ka nädalavahetustel ja pühadel."
+    },
+    {
+      "title": "Visualiseerimine",
+      "text": "Tasuta visualiseerimine enne tööde algust."
+    }
+  ],
+  "contactTitle": "Kontakt:",
+  "contactSubtitle": "Võta meiega ühendust Telegrami kaudu:",
+  "form": {
+    "nameLabel": "Teie nimi",
+    "namePlaceholder": "Sisestage oma nimi",
+    "phoneLabel": "Telefon",
+    "phonePlaceholder": "Sisestage oma telefoninumber",
+    "emailLabel": "E-post",
+    "emailPlaceholder": "Sisestage oma e-post",
+    "commentLabel": "Kommentaar",
+    "commentPlaceholder": "Sisestage oma kommentaar",
+    "consent": "Annan nõusoleku andmete töötlemiseks",
+    "submit": "Saada Telegrami",
+    "success": "Vorm on edukalt saadetud!"
+  },
+  "cookie": {
+    "title": "Küpsised",
+    "intro": "Kasutame küpsiseid, et pakkuda teile parimat kogemust meie veebilehel. Küpsised aitavad meil:",
+    "benefits": [
+      "Meeles pidada teie eelistusi ja seadeid;",
+      "Analüüsida veebikäitumist teenuse parandamiseks;",
+      "Näidata asjakohast reklaami ja pakkumisi."
+    ],
+    "details": "Saate küpsiste seadeid igal ajal muuta oma brauseri seadetes. Veebilehe kasutamist jätkates nõustute meie küpsiste poliitikaga.",
+    "accept": "Nõustu"
+  },
+  "faq": {
+    "title": "Korduma kippuvad küsimused:",
+    "button": "Vaata vastuseid",
+    "items": [
+      {
+        "question": "Kas saab printida tekstuuriga seinale?",
+        "answer": "Jah, tekstuuriga seinale saab printida, kuid tulemus sõltub tekstuurist. Mõnel juhul ei jõua värv süvenditesse, vaid jääb ainult kõrgematele kohtadele. Kui see tulemus sobib, siis saab printida."
+      },
+      {
+        "question": "Kas töötame kliendi kujundusega?",
+        "answer": "Jah, võite saata pildi, luua selle tehisintellektiga või tellida kujunduse mujalt. Me saame ka tausta eemaldada ja kujunduse kohandada."
+      },
+      {
+        "question": "Kuidas tellida teenust Soomes?",
+        "answer": "Täpselt nagu Eestis: täitke vorm, sõnum saadetakse Telegrami ja me võtame teiega ühendust."
+      },
+      {
+        "question": "Kui kaua püsib kujutis?",
+        "answer": "Siseruumides — 10–15 aastat ja rohkem. Välitingimustes — alates 3 aastast tänu UV-tintidele, mis on vastupidavad pleekimisele ja niiskusele."
+      }
+    ]
+  },
+  "footer": {
+    "registration": "Registrinumber:",
+    "phone": "Telefon:",
+    "email": "E-post:",
+    "social": "Meie sotsiaalmeedias:",
+    "privacy": "Turvapoliitika",
+    "cookies": "Küpsised",
+    "about": "Ettevõttest",
+    "rights": "Kõik õigused kaitstud",
+    "description": "Me oleme disainerite ja trükkalite meeskond, kes tegutseb Eestis ja Soomes. Meie missioon on muuta tavalised seinad inspiratsiooni, õppimise ja rõõmu allikaks."
+  },
+  "services": {
+    "title": "Meie teenused:",
+    "list": [
+      {
+        "title": "3D-printimine seinale",
+        "description": "Erksad kolmemõõtmelised või kahemõõtmelised kujutised otse seinale."
+      },
+      {
+        "title": "3D-printimine põrandale",
+        "description": "Silmapaistvad kunstilised kujutised põrandal, mis täiendavad seinadisaini või seisavad eraldi."
+      },
+      {
+        "title": "Välis- ja sisereklaam",
+        "description": "Reklaamide ja logode printimine ettevõtetele, hotellidele, riigiasutustele."
+      },
+      {
+        "title": "Individuaalne disain",
+        "description": "Visuaalsed lahendused, mis arvestavad teie ruumi ja stiili eripäradega."
+      }
+    ],
+    "videoTitle": "Elusta oma ruum",
+    "videoDescription": "Kaunista oma kodu, eramud, lasteaiad ja muud ruumid vapustavate 3D-printidega.",
+    "button": "Vaata näiteid",
+    "gallery": [
+      "Lastele",
+      "Õhk",
+      "Feng shui",
+      "Loomad",
+      "Eksootika",
+      "Multikad",
+      "Paradiisinurgad",
+      "Kassid",
+      "Lilled"
+    ]
+  }
+}

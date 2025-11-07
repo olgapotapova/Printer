@@ -1,0 +1,123 @@
+{
+  "heroTitle": "Revive your walls\n in 3D style",
+  "heroSubtitle": "3D printing on any surface without renovation or dust. In Tallinn, Tartu, Narva, Pärnu,\n Helsinki...",
+  "cta": "Get a free visualization",
+  "advantagesTitle": "Why choose us?",
+  "menu": {
+    "portfolio": "Portfolio",
+    "benefits": "Benefits",
+    "contact": "Contact"
+  },
+  "advantages": [
+    {
+      "title": "Speed",
+      "text": "Printing in 1 day without dismantling or renovation."
+    },
+    {
+      "title": "Surfaces",
+      "text": "20+ surfaces: concrete, tile, glass..."
+    },
+    {
+      "title": "Weekends",
+      "text": "We work on weekends and holidays."
+    },
+    {
+      "title": "Visualization",
+      "text": "Free visualization before starting the work."
+    }
+  ],
+  "contactTitle": "Contact:",
+  "contactSubtitle": "Reach out to us via Telegram:",
+  "form": {
+    "nameLabel": "Your name",
+    "namePlaceholder": "Enter your name",
+    "phoneLabel": "Phone",
+    "phonePlaceholder": "Enter your phone number",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Enter your email",
+    "commentLabel": "Comment",
+    "commentPlaceholder": "Enter your comment",
+    "consent": "I consent to data processing",
+    "submit": "Send via Telegram",
+    "success": "Form submitted successfully!"
+  },
+  "cookie": {
+    "title": "Cookies",
+    "intro": "We use cookies to make your experience on our site as comfortable as possible. Cookies help us:",
+    "benefits": [
+      "Remember your preferences and settings;",
+      "Analyze site behavior to improve service;",
+      "Show relevant ads and offers."
+    ],
+    "details": "You can change your cookie settings at any time in your browser. By continuing to use the site, you agree to our cookie policy.",
+    "accept": "Accept"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions:",
+    "button": "View answers",
+    "items": [
+      {
+        "question": "Can you print on textured walls?",
+        "answer": "Yes, printing on textured walls is possible, but results depend on the texture. In some cases, paint won’t reach the recesses and will only appear on raised areas. If that’s acceptable, printing can proceed."
+      },
+      {
+        "question": "Do you work with client designs?",
+        "answer": "Yes, you can send us an image, create one with AI, or hire a designer. We can remove backgrounds and adapt the layout."
+      },
+      {
+        "question": "How to order the service in Finland?",
+        "answer": "Just like in Estonia: fill out the form, the message goes to Telegram, and we’ll contact you."
+      },
+      {
+        "question": "How long does the image last?",
+        "answer": "Indoors — 10–15 years or more. Outdoors — from 3 years thanks to UV inks resistant to fading and moisture."
+      }
+    ]
+  },
+  "footer": {
+    "registration": "Registration number:",
+    "phone": "Phone:",
+    "email": "Email:",
+    "social": "Find us on social media:",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookies",
+    "about": "About the company",
+    "rights": "All rights reserved",
+    "description": "We are a team of designers and printers working in Estonia and Finland. Our mission is to turn ordinary walls into sources of inspiration, learning, and joy."
+  },
+  "services": {
+    "title": "Our Services:",
+    "list": [
+      {
+        "title": "3D Wall Printing",
+        "description": "Vivid 3D or 2D images printed directly onto walls."
+      },
+      {
+        "title": "3D Floor Printing",
+        "description": "Eye-catching floor art as an extension of wall design or standalone."
+      },
+      {
+        "title": "Outdoor & Indoor Advertising",
+        "description": "Printing ads and logos for companies, hotels, and public institutions."
+      },
+      {
+        "title": "Custom Design",
+        "description": "Tailored visual solutions based on your space and style."
+      }
+    ],
+    "videoTitle": "Revive your space",
+    "videoDescription": "Decorate your homes, private residences, kindergartens, and other spaces with stunning 3D prints.",
+    "button": "View cases",
+    "gallery": [
+      "For kids",
+      "Air",
+      "Feng Shui",
+      "Animals",
+      "Exotic",
+      "Cartoons",
+      "Paradise views",
+      "Cats",
+      "Flowers"
+    ]
+  }
+}
