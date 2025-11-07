@@ -7,8 +7,9 @@ i18n
   .use(Backend) // add backend
   .use(initReactI18next)
   .init({
-    lng: 'ru', // defoult language
+    // lng: 'ru', // defoult language
     fallbackLng: 'ru',
+    supportedLngs: ['ru', 'en', 'fi', 'et'],
     backend: {
       // loadPath: '${process.env.PUBLIC_URL}/locales/{{lng}}/{{ns}}.json', // path to API
        loadPath: `${process.env.PUBLIC_URL}/locales/{{lng}}/{{ns}}.json`, // path to API
