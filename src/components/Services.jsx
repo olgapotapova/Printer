@@ -242,12 +242,17 @@ const VideoButton = styled.button`
       imgGallery1, imgGallery2, imgGallery3, imgGallery4, imgGallery5,
       imgGallery6, imgGallery7, imgGallery8, imgGallery9
     ];
+    const serviceImages = [wallImage, florImage, adverticingImage, personalImage];
 
     const services = t('services.list', { returnObjects: true });
     const safeServices = Array.isArray(services) ? services : [];
 
-    console.log('services:', services);
-console.log('isArray:', Array.isArray(services));
+        if (!Array.isArray(services)) {
+      console.warn('services.list is not an array:', services);
+    }
+
+    // console.log('services:', services);
+    // console.log('isArray:', Array.isArray(services));
 
     const galleryLabels = t('services.gallery', { returnObjects: true });
     const [modalContent, setModalContent] = useState(null);
@@ -282,9 +287,18 @@ console.log('isArray:', Array.isArray(services));
       <ServicesContainer>
         <ServicesTitle>{t('services.title')}</ServicesTitle>
         <ServicesFlex>
-          {services.map((service, index) => (
+          {/* {services.map((service, index) => (
             <ServiceCard key={index}>
               <ServiceIcon src={service.src} alt={service.title} />
+              <ServiceText>
+                <ServiceTitle>{service.title}</ServiceTitle>
+                <ServiceDescription>{service.description}</ServiceDescription>
+              </ServiceText>
+            </ServiceCard>
+          ))} */}
+          {safeServices.map((service, index) => (
+            <ServiceCard key={index}>
+              <ServiceIcon src={serviceImages[index]} alt={service.title} />
               <ServiceText>
                 <ServiceTitle>{service.title}</ServiceTitle>
                 <ServiceDescription>{service.description}</ServiceDescription>
