@@ -12,8 +12,8 @@ i18n
     supportedLngs: ['ru', 'en', 'fi', 'et'],
     backend: {
       // loadPath: '${process.env.PUBLIC_URL}/locales/{{lng}}/{{ns}}.json', // path to API
-      //  loadPath: `${process.env.PUBLIC_URL}/locales/{{lng}}/{{ns}}.json`, // path to API
-       loadPath: `public/locales/{{lng}}/{{ns}}.json`, // path to API
+      loadPath: `${process.env.PUBLIC_URL}/locales/{{lng}}/{{ns}}.json`, // path to API
+      //  loadPath: `public/locales/{{lng}}/{{ns}}.json`, // path to API
     },
     ns: ['translation'], // naming
     defaultNS: 'translation',
