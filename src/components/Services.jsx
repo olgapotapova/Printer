@@ -237,16 +237,21 @@ const VideoButton = styled.button`
 //  const Services = () => {
   export default function Services() {
     const { t } = useTranslation();
-    const services = t('services.list', { returnObjects: true });
-    const galleryLabels = t('services.gallery', { returnObjects: true });
-    const [modalContent, setModalContent] = useState(null);
-    const openModal = (content) => setModalContent(content);
-    const closeModal = () => setModalContent(null);
 
     const imgGalleryList = [
       imgGallery1, imgGallery2, imgGallery3, imgGallery4, imgGallery5,
       imgGallery6, imgGallery7, imgGallery8, imgGallery9
     ];
+
+    const services = t('services.list', { returnObjects: true });
+
+    console.log('services:', services);
+    console.log('typeof services:', typeof services);
+
+    const galleryLabels = t('services.gallery', { returnObjects: true });
+    const [modalContent, setModalContent] = useState(null);
+    const openModal = (content) => setModalContent(content);
+    const closeModal = () => setModalContent(null);
 
   // const services = [
   //   {
