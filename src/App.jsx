@@ -16,6 +16,7 @@ import './App.css';
 
 function App() {
   return (
+    <I18nReadyWrapper>
     <div className="App">
       <CookieModal />
       <Hero />
@@ -28,6 +29,7 @@ function App() {
       {/* <Contact /> */}
       <Footer />
     </div>
+    </I18nReadyWrapper>
   );
 }
 
