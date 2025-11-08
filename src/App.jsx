@@ -1,9 +1,9 @@
 import React from 'react';
 import CookieModal from './components/CookieModal';
 import i18n from 'i18next';
-console.log('Active language:', i18n.language);
 
 import {
+  I18nReadyWrapper,
   Hero,
   Services,
   Advantages,
@@ -13,6 +13,8 @@ import {
   Footer
 } from './components';
 import './App.css';
+
+console.log('Active language:', i18n.language);
 
 function App() {
   return (
