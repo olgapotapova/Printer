@@ -1,5 +1,7 @@
 import React from 'react';
 import CookieModal from './components/CookieModal';
+import i18n from 'i18next';
+console.log('Active language:', i18n.language);
 
 import {
   Hero,

@@ -17,8 +17,6 @@ import imgGallery7 from '../assets/Gallery7.png'
 import imgGallery8 from '../assets/Gallery8.png'
 import imgGallery9 from '../assets/Gallery9.png'
 import { useTranslation } from 'react-i18next'
-import i18n from 'i18next';
-console.log('Active language:', i18n.language);
 
 const GallaryContainer = styled.div`
   position: relative;
