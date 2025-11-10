@@ -1,0 +1,129 @@
+{
+  "heroTitle": "Herätä seinät henkiin\n 3D-tyylillä",
+  "heroSubtitle": "3D-tulostus kaikille pinnoille ilman remonttia tai pölyä. Tallinnassa, Tartossa, Narvassa, Pärnussa,\n Helsingissä...",
+  "cta": "Pyydä ilmainen visualisointi",
+  "advantagesTitle": "Miksi valita meidät?",
+  "menu": 
+    {
+      "portfolio": "Portfoliomme",
+      "benefits": "Edut",
+      "contact": "Yhteystiedot",
+      "close": "Lähellä"
+    },
+  "advantages": [
+    {
+      "title": "Nopeus",
+      "text": "Tulostus yhdessä päivässä ilman purkua tai remonttia."
+    },
+    {
+      "title": "Pinnat",
+      "text": "Yli 20 pintaa: betoni, laatta, lasi..."
+    },
+    {
+      "title": "Viikonloput",
+      "text": "Työskentelemme myös viikonloppuisin ja juhlapyhinä."
+    },
+    {
+      "title": "Visualisointi",
+      "text": "Ilmainen visualisointi ennen työn aloitusta."
+    }
+  ],
+  "contactTitle": "Yhteystiedot:",
+  "contactSubtitle": "Ota meihin yhteyttä Telegramin kautta:",
+  "form": {
+    "nameLabel": "Nimesi",
+    "namePlaceholder": "Kirjoita nimesi",
+    "phoneLabel": "Puhelin",
+    "phonePlaceholder": "Kirjoita puhelinnumerosi",
+    "emailLabel": "Sähköposti",
+    "emailPlaceholder": "Kirjoita sähköpostiosoitteesi",
+    "commentLabel": "Kommentti",
+    "commentPlaceholder": "Kirjoita kommenttisi",
+    "consent": "Annan suostumukseni tietojen käsittelyyn",
+    "submit": "Lähetä Telegramin kautta",
+    "success": "Lomake lähetetty onnistuneesti!"
+  },
+  "cookie": {
+    "title": "Evästeet",
+    "intro": "Käytämme evästeitä tarjotaksemme sinulle parhaan mahdollisen käyttökokemuksen sivustollamme. Evästeet auttavat meitä:",
+    "benefits": [
+      "Muistamaan asetuksesi ja mieltymyksesi;",
+      "Analysoimaan käyttäytymistä sivustolla palvelun parantamiseksi;",
+      "Näyttämään sinulle osuvia mainoksia ja tarjouksia."
+    ],
+    "details": "Voit muuttaa evästeasetuksia milloin tahansa selaimesi asetuksista. Jatkamalla sivuston käyttöä hyväksyt evästekäytäntömme.",
+    "accept": "Hyväksy"
+  },
+  "faq": {
+    "title": "Usein kysyttyä:",
+    "button": "Näytä vastaukset",
+    "items": [
+      {
+        "question": "Voiko tulostaa teksturoidulle seinälle?",
+        "answer": "Kyllä, teksturoidulle seinälle voi tulostaa, mutta tulos riippuu tekstuurista. Joissain tapauksissa väri ei pääse syvennyksiin vaan jää vain kohokohtiin. Jos tämä sopii sinulle, tulostus onnistuu."
+      },
+      {
+        "question": "Työskentelettekö asiakkaan suunnittelun kanssa?",
+        "answer": "Kyllä, voit lähettää kuvan, luoda sen tekoälyllä tai tilata suunnittelun ulkopuoliselta. Voimme myös poistaa taustan ja mukauttaa asettelun."
+      },
+      {
+        "question": "Miten tilaan palvelun Suomessa?",
+        "answer": "Samalla tavalla kuin Virossa: täytä lomake, viesti lähetetään Telegramiin ja otamme sinuun yhteyttä."
+      },
+      {
+        "question": "Kuinka kauan kuva kestää?",
+        "answer": "Sisätiloissa — 10–15 vuotta tai enemmän. Ulkona — vähintään 3 vuotta UV-värien ansiosta, jotka kestävät haalistumista ja kosteutta."
+      }
+    ]
+  },
+  "footer": {
+    "registration": "Rekisterinumero:",
+    "phone": "Puhelin:",
+    "email": "Sähköposti:",
+    "social": "Meidät löydät somesta:",
+    "privacy": "Tietosuojakäytäntö",
+    "cookies": "Evästeet",
+    "about": "Tietoa yrityksestä",
+    "rights": "Kaikki oikeudet pidätetään",
+    "description": "Olemme suunnittelijoiden ja tulostajien tiimi, joka toimii Virossa ja Suomessa. Missiomme on muuttaa tavalliset seinät inspiraation, oppimisen ja ilon lähteiksi."
+  },
+  "services": {
+    "list": [
+      {
+        "title": "3D-tulostus seinille",
+        "description": "Värikkäät 3D- tai 2D-kuvat suoraan seinille."
+      },
+      {
+        "title": "3D-tulostus lattioille",
+        "description": "Huomiota herättävät taidekuvat lattialla, joko seinäsuunnittelun jatkeena tai erillisinä."
+      },
+      {
+        "title": "Ulkomainonta ja sisämainonta",
+        "description": "Mainosten ja logojen tulostus yrityksille, hotelleille ja julkisille laitoksille."
+      },
+      {
+        "title": "Yksilöllinen suunnittelu",
+        "description": "Visuaaliset ratkaisut, jotka huomioivat tilasi ja tyylisi erityispiirteet."
+      }
+    ],
+    "title": "Palvelumme:",
+    "videoHeader": "Tuotannon salaisuuksien\n paljastaminen:",
+    "videoTitle": "Herätä tilasi henkiin",
+    "videoDescription": "Koristele kotisi, yksityisasuntosi, päiväkodit ja muut tilat upeilla 3D-tulosteilla.",
+    "button": "Katso esimerkkejä",
+    "gallery": [
+      "Lapsille",
+      "Ilma",
+      "Feng shui",
+      "Eläimet",
+      "Eksoottinen",
+      "Piirretyt",
+      "Paratiisinäkymät",
+      "Kissat",
+      "Kukat"
+    ]
+  }
+}
+
+
+
