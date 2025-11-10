@@ -1,9 +1,9 @@
 import React from 'react';
 import CookieModal from './components/CookieModal';
 import i18n from 'i18next';
+import I18nReadyWrapper from './components/I18nReadyWrapper';
 
 import {
-  I18nReadyWrapper,
   Hero,
   Services,
   Advantages,

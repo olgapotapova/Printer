@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import i18n from './i18n';
+import i18n from '../i18n';
 
 export default function I18nReadyWrapper({ children }) {
   const [ready, setReady] = useState(i18n.isInitialized);

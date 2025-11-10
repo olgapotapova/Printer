@@ -430,9 +430,7 @@ const Hero = () => {
   }, [selectedLang]);
 
   const [isOpenLang, setIsOpenLang] = useState(false);
-
   const toggleDropdown = () => setIsOpenLang(!isOpenLang);
-
   const selectLanguage = (code) => {
     setSelectedLang(code);         //update local state
     i18n.changeLanguage(code);     //switching the language in i18next
@@ -529,19 +527,19 @@ const Hero = () => {
                     </Link>
                   </li>
                 </DropdownUl>
-                <CloseButton onClick={closeMenu}>Закрыть</CloseButton>
+                <CloseButton onClick={closeMenu}>Закрыть{t('menu.close')}</CloseButton>
               </Dropdown>
             )}
           </MenuWrapper>
 
             <Link to="Services" smooth={true} duration={500}>
-              <ScrollButton>Портфолио</ScrollButton>
+              <ScrollButton>{t('menu.portfolio')}</ScrollButton>
             </Link>
             <Link to="Advantages" smooth={true} duration={500}>
-              <ScrollButton>Преимущества</ScrollButton>
+              <ScrollButton>{t('menu.benefits')}</ScrollButton>
             </Link>
             <Link to="Contact" smooth={true} duration={500}>
-              <ScrollButton>Контакт</ScrollButton>
+              <ScrollButton>{t('menu.contact')}</ScrollButton>
             </Link>
           </Navigation>
         </HeroHeader>

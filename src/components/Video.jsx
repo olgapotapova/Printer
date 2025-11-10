@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import secondaryImage from '../assets/secondary-image.png';
 import { device } from './Device';
 import LottieVideo from './LottieVideo';
+import { useTranslation } from 'react-i18next';
 
 const VideoSection = styled.section`
   padding: 100px 0;
@@ -90,16 +91,15 @@ const SecondaryImage = styled.img`
 `;
 
 const Video = () => {
+   const { t, i18n } = useTranslation();
   return (
     <VideoSection>
       
-      <VideoSectionTitle>Раскрываем тайны<br/> производства:</VideoSectionTitle>
+      <VideoSectionTitle>{t('videoHeader')}</VideoSectionTitle>
       <VideoBackground/>
 
-      <VideoContainer> 
-        
-        <VideoPlayer>
-                  
+      <VideoContainer>   
+        <VideoPlayer>                  
           <LottieVideo></LottieVideo>
           {/* <VideoImage src={videoCapture} alt="3D Design Video" /> */}
         </VideoPlayer>
