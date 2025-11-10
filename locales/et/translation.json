@@ -3,11 +3,13 @@
   "heroSubtitle": "3D-printimine igasugustele pindadele ilma remondi ja tolmuta. Tallinnas, Tartus, Narvas, Pärnus,\n Helsingis...",
   "cta": "Saada tasuta visualiseerimine",
   "advantagesTitle": "Miks valida meid?",
-  "menu": {
-    "portfolio": "Portfoolio",
-    "benefits": "Eelised",
-    "contact": "Kontakt"
-  },
+  "menu": 
+    {
+      "portfolio": "Portfoolio",
+      "benefits": "Eelised",
+      "contact": "Kontakt",
+      "close": "Sulge"
+    },
   "advantages": [
     {
       "title": "Kiirus",
@@ -105,6 +107,7 @@
         "description": "Visuaalsed lahendused, mis arvestavad teie ruumi ja stiili eripäradega."
       }
     ],
+    "videoHeader": "Tootmise saladuste\n paljastamine:",
     "videoTitle": "Elusta oma ruum",
     "videoDescription": "Kaunista oma kodu, eramud, lasteaiad ja muud ruumid vapustavate 3D-printidega.",
     "button": "Vaata näiteid",
