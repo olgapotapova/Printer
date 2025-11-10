@@ -258,7 +258,7 @@ const DropdownLang = styled.ul`
   position: absolute;
   top: 100%;
   left: 0;
-  background: transparents;
+  background: transparent;
   list-style: none;
   padding: 0;
   margin: 4px 0 0 0;
@@ -498,12 +498,6 @@ const Hero = () => {
                 {currentLabel} <Arrow>▼</Arrow>
               </ArrowButton>
             </LanguageSelector>
-
-            {/* <LanguageSelector>
-              Рус
-              <Arrow>▼</Arrow>
-            </LanguageSelector> */}
-            {/* <MenuImage src={MenuButton} alt=""></MenuImage> */}
 
             <MenuWrapper ref={menuRef}>
             <MobileMenuButton onClick={toggleMenu}><MenuImage src={MenuButton} alt="Menu icon."></MenuImage></MobileMenuButton>

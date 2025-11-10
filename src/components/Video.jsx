@@ -95,7 +95,7 @@ const Video = () => {
   return (
     <VideoSection>
       
-      <VideoSectionTitle>{t('videoHeader')}</VideoSectionTitle>
+      <VideoSectionTitle style={{ whiteSpace: 'pre-line' }}>{t('videoHeader')}</VideoSectionTitle>
       <VideoBackground/>
 
       <VideoContainer>   

@@ -88,7 +88,6 @@
     "description": "Olemme suunnittelijoiden ja tulostajien tiimi, joka toimii Virossa ja Suomessa. Missiomme on muuttaa tavalliset seinät inspiraation, oppimisen ja ilon lähteiksi."
   },
   "services": {
-    "title": "Palvelumme:",
     "list": [
       {
         "title": "3D-tulostus seinille",
@@ -107,6 +106,7 @@
         "description": "Visuaaliset ratkaisut, jotka huomioivat tilasi ja tyylisi erityispiirteet."
       }
     ],
+    "title": "Palvelumme:",
     "videoHeader": "Tuotannon salaisuuksien\n paljastaminen:",
     "videoTitle": "Herätä tilasi henkiin",
     "videoDescription": "Koristele kotisi, yksityisasuntosi, päiväkodit ja muut tilat upeilla 3D-tulosteilla.",

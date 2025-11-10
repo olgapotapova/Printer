@@ -245,13 +245,13 @@ const VideoButton = styled.button`
     const serviceImages = [wallImage, florImage, adverticingImage, personalImage];
 
     const services = t('services.list', { returnObjects: true });
-    console.log('services:', services);
-console.log('typeof:', typeof services);
-console.log('isArray:', Array.isArray(services));
-
     const safeServices = Array.isArray(services) ? services : [];
 
-        if (!Array.isArray(services)) {
+    console.log('services:', services);
+    console.log('typeof:', typeof services);
+    console.log('isArray:', Array.isArray(services));
+
+    if (!Array.isArray(services)) {
       console.warn('services.list is not an array:', services);
     }
 

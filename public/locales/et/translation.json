@@ -88,7 +88,6 @@
     "description": "Me oleme disainerite ja trükkalite meeskond, kes tegutseb Eestis ja Soomes. Meie missioon on muuta tavalised seinad inspiratsiooni, õppimise ja rõõmu allikaks."
   },
   "services": {
-    "title": "Meie teenused:",
     "list": [
       {
         "title": "3D-printimine seinale",
@@ -107,6 +106,7 @@
         "description": "Visuaalsed lahendused, mis arvestavad teie ruumi ja stiili eripäradega."
       }
     ],
+    "title": "Meie teenused:",
     "videoHeader": "Tootmise saladuste\n paljastamine:",
     "videoTitle": "Elusta oma ruum",
     "videoDescription": "Kaunista oma kodu, eramud, lasteaiad ja muud ruumid vapustavate 3D-printidega.",

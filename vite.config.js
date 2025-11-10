@@ -5,6 +5,7 @@ import Sitemap from 'vite-plugin-sitemap';
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/Printer/',
   plugins: [react(),
     VitePWA({
       workbox: {
@@ -42,6 +43,5 @@ export default defineConfig({
   ],
   server: {
     port: 3000
-  },
-  base: '/Printer/' 
+  }
 })

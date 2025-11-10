@@ -88,7 +88,6 @@
     "description": "We are a team of designers and printers working in Estonia and Finland. Our mission is to turn ordinary walls into sources of inspiration, learning, and joy."
   },
   "services": {
-    "title": "Our Services:",
     "list": [
       {
         "title": "3D Wall Printing",
@@ -107,6 +106,7 @@
         "description": "Tailored visual solutions based on your space and style."
       }
     ],
+    "title": "Our Services:",
     "videoHeader": "Revealing the secrets\n of production:",
     "videoTitle": "Revive your space",
     "videoDescription": "Decorate your homes, private residences, kindergartens, and other spaces with stunning 3D prints.",
