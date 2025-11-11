@@ -250,7 +250,7 @@ const Arrow = styled.span`
   transition: transform 0.2s ease;
   transform: ${({ isOpenLang }) => (isOpenLang ? 'rotate(180deg)' : 'rotate(0deg)')};
   @media ${device.tablet} {
-    /* display: none; */
+    display: none;
   }
 `;
 
@@ -542,9 +542,6 @@ const Hero = () => {
           <HeroText>
             <HeroTitle style={{ whiteSpace: 'pre-line' }}>{t('heroTitle')}</HeroTitle>
             <HeroSubtitle style={{ whiteSpace: 'pre-line' }}>
-              {/* 3D-печать на любых поверхностях без ремонта и пыли. В Таллинне,
-              Тарту, Нарве, Пярну, <br />
-              Хельсинки... */}
               {t('heroSubtitle')}
             </HeroSubtitle>
 
@@ -557,7 +554,6 @@ const Hero = () => {
             </Modal> */}
             <HeroButton onClick={() => openModal(<p>Контактная форма</p>)}>
               <a style={{color: 'white', textDecoration: 'none', fontSize: '17px' }} href="https://t.me/DDesignInvest" target="_blank" rel="noopener noreferrer">
-                {/* Получить бесплатную визуализацию */}
                 {t('cta')}
               </a>
             </HeroButton>

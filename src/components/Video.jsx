@@ -91,11 +91,11 @@ const SecondaryImage = styled.img`
 `;
 
 const Video = () => {
-   const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   return (
     <VideoSection>
       
-      <VideoSectionTitle style={{ whiteSpace: 'pre-line' }}>{t('videoHeader')}</VideoSectionTitle>
+      <VideoSectionTitle style={{ whiteSpace: 'pre-line' }}>{t('videoH')}</VideoSectionTitle>
       <VideoBackground/>
 
       <VideoContainer>   

@@ -54,6 +54,7 @@
     "details": "Saate küpsiste seadeid igal ajal muuta oma brauseri seadetes. Veebilehe kasutamist jätkates nõustute meie küpsiste poliitikaga.",
     "accept": "Nõustu"
   },
+  "videoH": "Tootmise saladuste\n paljastamine:",
   "faq": {
     "title": "Korduma kippuvad küsimused:",
     "button": "Vaata vastuseid",
@@ -107,7 +108,6 @@
       }
     ],
     "title": "Meie teenused:",
-    "videoHeader": "Tootmise saladuste\n paljastamine:",
     "videoTitle": "Elusta oma ruum",
     "videoDescription": "Kaunista oma kodu, eramud, lasteaiad ja muud ruumid vapustavate 3D-printidega.",
     "button": "Vaata näiteid",

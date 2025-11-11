@@ -186,7 +186,7 @@ const Footer = () => {
               <a href="https://www.facebook.com/share/1JMboyMb3B" target="_blank" rel="noopener noreferrer">
                 <SocialIcon src={metaImage} alt="Meta icon." />
               </a> 
-              <a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/DDesignInvest" target="_blank" rel="noopener noreferrer">
                 <SocialIcon src={instagramImage} alt="Instagram icon." />
               </a> 
               <a href="https://t.me/DDesignInvest" target="_blank" rel="noopener noreferrer">

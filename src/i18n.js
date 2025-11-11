@@ -12,9 +12,9 @@ i18n
     fallbackLng: 'ru',
     supportedLngs: ['ru', 'en', 'fi', 'et'],
     backend: {
-      loadPath: '/Printer/locales/{{lng}}/{{ns}}.json'
-      // loadPath: `${import.meta.env.BASE_URL}locales/{{lng}}/{{ns}}.json` // path to API
-      // loadPath: `src/locales/{{lng}}/{{ns}}.json`, // path to API
+      // loadPath: '/Printer/locales/{{lng}}/{{ns}}.json' // path to API
+      // loadPath: `${import.meta.env.BASE_URL}locales/{{lng}}/{{ns}}.json` 
+      loadPath: `public/locales/{{lng}}/{{ns}}.json`, // path to API
     },
     ns: ['translation'], // naming
     defaultNS: 'translation',
