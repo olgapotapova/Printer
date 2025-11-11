@@ -54,6 +54,7 @@
     "details": "Voit muuttaa evästeasetuksia milloin tahansa selaimesi asetuksista. Jatkamalla sivuston käyttöä hyväksyt evästekäytäntömme.",
     "accept": "Hyväksy"
   },
+  "videoH": "Tuotannon salaisuuksien\n paljastaminen:",
   "faq": {
     "title": "Usein kysyttyä:",
     "button": "Näytä vastaukset",
@@ -107,7 +108,6 @@
       }
     ],
     "title": "Palvelumme:",
-    "videoHeader": "Tuotannon salaisuuksien\n paljastaminen:",
     "videoTitle": "Herätä tilasi henkiin",
     "videoDescription": "Koristele kotisi, yksityisasuntosi, päiväkodit ja muut tilat upeilla 3D-tulosteilla.",
     "button": "Katso esimerkkejä",
